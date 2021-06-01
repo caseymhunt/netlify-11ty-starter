@@ -1,16 +1,16 @@
-<div class="{{ 'lg:fixed' if path == 'home' }} w-full">
+<div class="w-full">
   <nav 
-  class="flex flex-col p-2 transition duration-300 ease-in-out" 
-  :class="{ 'min-h-screen bg-gray-900': isOpen }"
+  class="flex flex-col transition duration-300 ease-in-out" 
+  :class="{ 'min-h-screen bg-gray-1000': isOpen }"
   x-data="{ isOpen: false }"
   @keydown.escape="isOpen = false">
 
-    <div class="flex items-center justify-center flex-row">
+    <div class="flex items-center justify-center flex-row px-2 pt-2">
       <!-- Logo-->
       <a href="/" 
       class="text-indigo-500 font-bold text-lg"
       :class="{ 'invisible': isOpen }">
-        <img src="/static/img/logo.svg" class="w-20" alt="Desk to defender homepage" />
+        <img src="/static/img/logo.svg" class="w-16" alt="Desk to defender homepage" />
       </a>
 
       <!-- Menu (button)-->
@@ -23,8 +23,7 @@
       </button>
     </div>
 
-    <div class="text-center uppercase text-sm pt-3 pb-2 border-b border-gray-900"
-    :class="{ 'border-transparent': isOpen }">
+    <div class="uppercase text-sm pt-3 px-2 pb-2 border-b border-gray-600">
       <span :class="{ 'invisible': isOpen }">
       A leftist's guide to defensive principles
       </span>
@@ -32,7 +31,7 @@
 
     <!-- Menu -->
     <div 
-    class="w-full flex-grow border-t border-gray-700" 
+    class="w-full flex-grow" 
     :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" 
     @click.away="isOpen = false" 
     x-show="isOpen">

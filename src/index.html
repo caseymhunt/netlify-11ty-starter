@@ -1,22 +1,41 @@
 ---
 layout: default
-title: WIP
+title: home
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center mt-4">
-  <h1 class="mb-8">
-    Welcome to
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
-    </strong>
+<header class="px-4 border-b border-gray-300">
+  <h1 class="my-24 uppercase">
+    <span class="block text-gray-900 font-extrabold text-2xl tracking-widest leading-6">From Desk to</span>
+    <span class="block text-gray-900 font-extrabold text-4xl tracking-wide">Defender</span>
+    <hr class="my-4" />
+    <span class="block text-red-800 font-black text-2xl tracking-wide">Citizen Manual</span>
   </h1>
 
-  <p class="px-4">
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-    Starter Template. Get Started by editing.
-    <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-  </p>
+  <button class="block w-full text-left uppercase border-4 border-red-700 text-red-700 font-bold tracking-wider py-4 px-2">Read the manual &rightarrow;</button>
+  <button class="block w-full text-left uppercase border-4 border-transparent underline text-red-700 font-bold tracking-wider py-4 px-2 mb-6">Download &searrow;</button>
+</header>
+
+<main>
+  <article class="py-8 px-4 border-b border-gray-300">
+    <img src="/static/img/logo.svg" class="w-16" alt="Desk to defender homepage" />
+    <h2 class="uppercase mt-4 mb-6 font-extrabold tracking-widest">About the project</h2>
+    <p class="p-4 border-4 border-gray-200 font-mono leading-8 text-gray-700">
+      Preparing yourself for whatever may come is quite a daunting task when you get right down to it. In the face of logistical breakdowns, food shortages, civil unrest, outright invasion, or natural disasters, there are many things to consider, each one having its own sizable length and breadth.
+      <br /><br />
+      It is the aim of this manual to give the reader some idea as to where to begin, as well as lay the foundations for growth. Using this manual, you will learn how to strengthen your mind and body, develop a survival mindset, how to strengthen your body without a gym, basic first aid, maintain and utilize firearms, and many other useful tools.
+    </p>
+  </article>
+  <aside class="py-8 px-4 border-b border-gray-300">
+    <h2 class="uppercase mb-4 font-extrabold tracking-widest">Help support the project</h2>
+    <p class="mb-10 text-gray-700 leading-7">Offset costs and expand the project by supporting us on Patreon, every dollar goes toward improving Desk to Defender.</p>
+    <button class="block w-full text-left uppercase border-4 border-red-700 text-red-700 font-bold tracking-wider py-4 px-2 mb-4">Support the project on Patreon &nearrow;</button>
+  </aside>
+</main>
+
+<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center mt-4">
+
+  <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
 
   {% include "./_includes/partials/content.html" %}
 </div>
